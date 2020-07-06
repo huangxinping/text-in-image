@@ -1,0 +1,103 @@
+[TOC]
+
+```git init```
+> 初始化目录的版本控制
+
+```git status```
+> 检查仓库的当前状态
+
+```git add -all```
+> 检查仓库中的所有文件加入到暂存区
+
+```git commit -m ""```
+> 将所有暂存的文件提交至仓库
+
+```git log --oneline```
+> 使用log命令查看仓库历史记录
+
+```git branch --list```
+> 列出本地分支
+
+```git branch --all```
+> 列出所有分支（包含远程分支）
+
+```git fetch```
+> 获取更新的列表和所有远程分支的内容
+
+```git checkout --track origin/feature/login```
+> 使用checkout命令切换分支（远端已有，本地仅签出）
+
+```git checkout -b feature/login master```
+> 从主分支创建一个新的开发分支
+
+```git config --global core.excludesfile ~./gitignore```
+> 告诉Git“忽略”文件的列表存放在什么位置
+
+```git show fao4c30```
+> 使用show命令显示单个提交的日志消息和文本diff
+
+```git tag first-import fa04c30```
+> 为某个提交对象添加一个新的标签first-import
+
+```git tag```
+> 列出所有标签
+
+```git remote add origin git@gitlab.com:huangxinping/zeus.git```
+> 使用origin名称在本地仓库中添加远程连接（origin可任意名称）
+
+```git remote --verbose```
+> 列出连接至你当前仓库的远程仓库
+
+```git push```
+> 使用push命令上传分支
+
+```git push --set-upstream origin/feature/login feature/login```
+> 在长传本地分支时设置上游分支
+
+```git merge --no-ff feature/login```
+> 将feature/login分支并入到某分支
+
+```git branch --delete feature/login```
+> 删除feature/login分支的本地副本
+
+```git push --delete origin feature/login```
+> 删除不再需要的远程分支
+
+```git clone URL```
+> 下载一份远程仓库的副本
+
+```git checkout --filename```
+> 舍弃工作目录中对一个文件的修改（修改的文件未被暂存或提交）
+
+```git reset --hard```
+> 舍弃工作目录中所有未保存的变更（文件已暂存，但未被提交）
+
+```git reset commit```
+> 合并与某个特定提交（但不含）之间的多个提交
+
+```git clean -fd```
+> 移除所有未保存的变更，包含未跟踪的文件（修改的文件未被提交）
+
+```git reset --hard commit```
+> 移除所有已暂存的变更和某个提交之前提交的工作，但不移除工作目录中的新文件
+
+```git revert commit```
+> 移除之前的工作，但完整保留提交历史记录（“前进式回滚”）（分支已经被发布，工作目录是干净的）
+
+```git rebase --interactive commit```
+> 从分支历史记录中移除一个单独的提交（修改的文件已经被提交，工作目录是干净的，分支尚未进行发布）
+
+```git reflog```
+> 产看分支的详细历史记录
+
+```git cherry-pick commit```
+> 将提交从一个分支复制到另一个分支
+
+```git reset --merge ORIG_HEAD```
+> 移除当前分支中所有在最近一次合并中引入的提交
+
+```git reset HEAD filename```
+> 从暂存区移除提出的文件修改
+
+```git reset --hard HEAD```
+> 将所有已变更的文件还原到之前保存的状态
